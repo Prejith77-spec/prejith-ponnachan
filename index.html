@@ -18,9 +18,9 @@
 <meta name="theme-color" content="#0B0A10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;600&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --ink:#0B0A10;--ink-2:#14111C;--plum:#2A1B45;--violet:#6B46C1;--violet-soft:#B9A3F2;
@@ -177,6 +177,56 @@ footer a{color:var(--gold-soft)}
   .js .reveal.in{opacity:1;transform:none}
 }
 @media print{.nav,.actions,.early-toggle{display:none}.early[hidden]{display:block}body{background:#fff;color:#111}.reveal{opacity:1!important;transform:none!important}}
+
+/* ================= BOLD LAYER ================= */
+.hero{background:radial-gradient(ellipse 60% 70% at 15% 10%,rgba(107,70,193,.42),transparent 60%),radial-gradient(ellipse 45% 55% at 85% 45%,rgba(201,162,74,.16),transparent 65%),var(--ink)}
+.hero h1{font-weight:800;font-size:clamp(3rem,7.5vw,6.4rem);line-height:.98;letter-spacing:-.035em}
+.grad{background:linear-gradient(95deg,var(--violet-soft) 0%,var(--gold) 70%,var(--gold-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-label{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.hero-label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+.hero-photo figure{position:relative;padding:8px;border:1px solid var(--gold);border-radius:20px;background:var(--ink-2);box-shadow:0 0 0 6px rgba(201,162,74,.08),0 0 60px rgba(107,70,193,.45),0 0 120px rgba(201,162,74,.15)}
+.hero-photo img{border-radius:14px}
+.hero-grid{grid-template-columns:repeat(12,1fr)}
+.hero-copy{grid-column:1/span 7}
+.hero-photo{grid-column:9/span 4}
+@media (max-width:900px){.hero-copy{grid-column:1/-1}.hero-photo{grid-column:1/-1;max-width:150px}}
+
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--ink-2);padding:18px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee ul{display:flex;width:max-content;gap:0;animation:scrollx 60s linear infinite}
+.marquee li{font-family:var(--serif);font-weight:600;font-size:clamp(1.1rem,2vw,1.5rem);color:var(--ivory);white-space:nowrap;padding:0 28px;display:flex;align-items:center;gap:56px}
+.marquee li:nth-child(even){color:var(--gold)}
+.marquee li::after{content:"";width:8px;height:8px;background:var(--gold);transform:rotate(45deg);margin-left:28px}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee ul{animation:none;flex-wrap:wrap;width:auto;justify-content:center;row-gap:10px}.marquee li:nth-child(n+13){display:none}}
+
+.card{position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--violet),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
+.card:hover::before{transform:scaleX(1)}
+.num{display:block;font-family:var(--serif);font-weight:800;font-size:2.6rem;line-height:1;color:transparent;-webkit-text-stroke:1px var(--gold);margin-bottom:18px}
+.card h3{font-size:1.4rem}
+
+.plum{background:linear-gradient(180deg,var(--plum) 0%,#1D1330 55%,var(--ink) 100%)}
+.plum .card{background:rgba(11,10,16,.55)}
+.plum .intro{color:#C9C2D6}
+
+/* experience back to dark */
+.exp{background:var(--ink);color:var(--ivory)}
+.exp .label{color:var(--gold);border-bottom-color:var(--line)}
+.timeline::before{left:8px;width:2px;background:linear-gradient(180deg,var(--gold),var(--violet) 70%,transparent);box-shadow:0 0 12px rgba(201,162,74,.5)}
+.role{background:var(--ink-2);border:1px solid var(--line);color:var(--ivory);transition:border-color .25s}
+.role:hover{border-color:var(--gold)}
+.role::before{left:-34px;width:12px;height:12px;box-shadow:0 0 12px var(--gold)}
+.meta,.when{color:var(--muted)}
+.when{color:var(--violet-soft)}
+.role .desc{color:#D6D0E0}
+.taught{color:var(--ivory);font-size:1.12rem}
+.taught b{color:var(--gold)}
+.sub-role{border-top-color:var(--line)}
+.early-toggle{border-color:var(--gold);color:var(--gold-soft)}
+
+/* contact */
+.cta{position:relative;border-radius:24px;padding:clamp(40px,7vw,88px) clamp(20px,5vw,64px);background:radial-gradient(ellipse 70% 90% at 50% 0%,rgba(107,70,193,.45),transparent 70%),var(--ink-2);border:1px solid var(--gold);box-shadow:0 0 80px rgba(107,70,193,.25)}
+.cta h2{font-weight:800;font-size:clamp(2.6rem,7vw,5.4rem)}
 </style>
 </head>
 <body>
@@ -202,7 +252,7 @@ footer a{color:var(--gold-soft)}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="hero-label">Demand planning · Procurement</p>
-      <h1 id="h1">Prejith Varghese Ponnachan</h1>
+      <h1 id="h1">Prejith Varghese <span class="grad">Ponnachan</span></h1>
       <p class="lead">I decide what a parts business buys, and how much of it.</p>
       <p class="sub">I run planning and procurement for a multi-brand automotive parts distributor in Oman. I follow every order until the goods are checked into the warehouse.</p>
       <div class="actions">
@@ -217,21 +267,23 @@ footer a{color:var(--gold-soft)}
   </div>
 </section>
 
+<div class="marquee" aria-hidden="true"><ul><li>Demand forecasting</li><li>Price negotiation</li><li>Purchase orders and goods receipt</li><li>Customs and HS classification</li><li>Freight forwarder selection (LCL and FCL)</li><li>Supplier scorecards</li><li>ABC analysis</li><li>Power BI</li><li>Python, Pandas, Flask</li><li>SQL</li><li>AI workflow automation</li><li>Working capital and gross profit analysis</li><li>Demand forecasting</li><li>Price negotiation</li><li>Purchase orders and goods receipt</li><li>Customs and HS classification</li><li>Freight forwarder selection (LCL and FCL)</li><li>Supplier scorecards</li><li>ABC analysis</li><li>Power BI</li><li>Python, Pandas, Flask</li><li>SQL</li><li>AI workflow automation</li><li>Working capital and gross profit analysis</li></ul></div>
+
 <section id="what" aria-labelledby="what-h">
   <div class="wrap">
     <span class="label reveal">What I do</span>
     <h2 id="what-h" class="reveal">What I look after</h2>
     <div class="grid g-6">
-      <article class="card reveal"><h3>Demand planning</h3><p>Forecasts built from real demand and reviewed every cycle, so every order can be explained.</p></article>
-      <article class="card reveal"><h3>Procurement</h3><p>Enquiries turned into purchase orders, negotiated on market rates and checked line by line before anyone signs.</p></article>
-      <article class="card reveal"><h3>Freight and customs</h3><p>Shipments booked and cleared start to finish, with the paperwork right the first time.</p></article>
-      <article class="card reveal"><h3>Controls and reporting</h3><p>Checks that catch expensive mistakes before money leaves, and reports leadership can act on.</p></article>
-      <article class="card reveal"><h3>Automation</h3><p>Repetitive work turned into systems anyone can run, so the process holds up when I am not there.</p></article>
+      <article class="card reveal"><span class="num" aria-hidden="true">01</span><h3>Demand planning</h3><p>Forecasts built from real demand and reviewed every cycle, so every order can be explained.</p></article>
+      <article class="card reveal"><span class="num" aria-hidden="true">02</span><h3>Procurement</h3><p>Enquiries turned into purchase orders, negotiated on market rates and checked line by line before anyone signs.</p></article>
+      <article class="card reveal"><span class="num" aria-hidden="true">03</span><h3>Freight and customs</h3><p>Shipments booked and cleared start to finish, with the paperwork right the first time.</p></article>
+      <article class="card reveal"><span class="num" aria-hidden="true">04</span><h3>Controls and reporting</h3><p>Checks that catch expensive mistakes before money leaves, and reports leadership can act on.</p></article>
+      <article class="card reveal"><span class="num" aria-hidden="true">05</span><h3>Automation</h3><p>Repetitive work turned into systems anyone can run, so the process holds up when I am not there.</p></article>
     </div>
   </div>
 </section>
 
-<section id="work" aria-labelledby="work-h">
+<section id="work" class="plum" aria-labelledby="work-h">
   <div class="wrap">
     <span class="label reveal">Selected work</span>
     <h2 id="work-h" class="reveal">Problems I have solved</h2>
@@ -376,16 +428,18 @@ footer a{color:var(--gold-soft)}
 
 <section class="contact" id="contact" aria-labelledby="contact-h">
   <div class="wrap">
-    <span class="label reveal">Contact</span>
-    <h2 id="contact-h" class="reveal">Let's talk</h2>
-    <div class="actions reveal" style="justify-content:center">
+   <div class="cta reveal">
+    <span class="label">Contact</span>
+    <h2 id="contact-h">Let's talk</h2>
+    <div class="actions" style="justify-content:center">
       <a class="btn btn-primary" href="mailto:prejith.ponnachan1@outlook.com">Email me</a>
     </div>
-    <p class="reach reveal">
+    <p class="reach">
       <a href="mailto:prejith.ponnachan1@outlook.com">prejith.ponnachan1@outlook.com</a>
       <a href="https://linkedin.com/in/prejith-ponnachan" rel="noopener">linkedin.com/in/prejith-ponnachan</a>
       <span>Muscat, Oman</span>
     </p>
+   </div>
   </div>
 </section>
 </main>
