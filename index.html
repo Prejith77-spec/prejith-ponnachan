@@ -252,6 +252,19 @@ footer a{color:var(--gold-soft)}
 .v-short{--v:var(--bad)}.v-ok{--v:var(--ok)}.v-over{--v:var(--warn)}.v-dead{--v:var(--dead)}
 @media (max-width:980px){.sc-form{grid-template-columns:1fr 1fr;align-items:start}.sc-btn{grid-column:1/-1;justify-self:start}}
 @media (max-width:560px){.sc-form{grid-template-columns:1fr}}
+
+/* certificates */
+.edu li.cert{padding:0;border-bottom:1px solid var(--line)}
+.cert a{display:flex;gap:16px;align-items:center;padding:16px 0;text-decoration:none;color:inherit}
+.cert img{flex:none;width:96px;height:68px;object-fit:cover;object-position:center top;border:1px solid var(--line);border-radius:8px;transition:border-color .25s,transform .25s}
+.cert a:hover img{border-color:var(--gold);transform:translateY(-2px)}
+.edu li .cert-txt{display:block;color:var(--ivory);margin-top:0}
+.edu li .cert-txt b{color:var(--ivory)}
+.edu li .cert-txt span{color:var(--muted)}
+.edu li .cert-txt .cert-link{color:var(--gold-soft)}
+.cert .cert-link{display:inline-block;color:var(--gold-soft);font-size:.88rem;margin-top:6px;border-bottom:1px solid var(--line)}
+.cert a:hover .cert-link{border-bottom-color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.cert a:hover img{transform:none}}
 </style>
 </head>
 <body>
@@ -279,8 +292,8 @@ footer a{color:var(--gold-soft)}
     <div class="hero-copy">
       <p class="hero-label">Demand planning · Procurement</p>
       <h1 id="h1">Prejith Varghese <span class="grad">Ponnachan</span></h1>
-      <p class="lead">I decide what a parts business buys, and how much of it.</p>
-      <p class="sub">I run planning and procurement for a multi-brand automotive parts distributor in Oman. I follow every order until the goods are checked into the warehouse.</p>
+      <p class="lead">Helping a parts business decide what to buy, and how much of it.</p>
+      <p class="sub">Planning and procurement for a multi-brand automotive parts distributor in Oman. Every order is tracked from enquiry until the goods are checked into the warehouse.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#work">See the work</a>
         <a class="btn btn-secondary" href="#stock-check">Check your stock</a>
@@ -368,26 +381,26 @@ footer a{color:var(--gold-soft)}
         <p class="meta">Multi-brand automotive parts distributor · Full-time · Muscat, Oman (on-site)</p>
         <p class="when">Apr 2024 to present</p>
         <p class="desc">I plan and buy across a wide international parts range, manage suppliers and freight, clear goods through customs, look after the brand range and pricing, and report to the General Manager and CEO.</p>
-        <p class="taught"><b>What it taught me</b>Most costly mistakes start as a small number nobody checked. I check the small numbers now, even when it slows me down.</p>
+        <p class="taught"><b>What it taught me</b>Most mistakes start small. I try to check the details, even when there is pressure to move quickly.</p>
       </article>
       <article class="role reveal">
         <h3>Head of Marketing and Strategy</h3>
         <p class="meta">Puma Performance Pathway · Contract · Bury St Edmunds, UK (remote)</p>
         <p class="when">Dec 2023 to Jan 2025</p>
         <p class="desc">Led marketing and strategy, and built the dashboards leadership used to make decisions.</p>
-        <p class="taught"><b>What it taught me</b>A strategy is only useful once someone can act on it on Monday morning. I started ending every piece of work with the next step written down.</p>
+        <p class="taught"><b>What it taught me</b>A plan only helps if people know what to do next. I try to end every piece of work with a clear next step.</p>
       </article>
       <article class="role reveal">
         <h3>Marketing Consultant</h3>
         <p class="meta">DubSports · Contract · Birmingham, UK (remote)</p>
         <p class="when">Jul 2023 to Nov 2023</p>
-        <p class="taught"><b>What it taught me</b>Advice only lands when it fits the client's situation. Listening first saved me more time than any framework did.</p>
+        <p class="taught"><b>What it taught me</b>The client always knows their business better than I do. Listening first and asking questions helped far more than offering ideas early.</p>
       </article>
       <article class="role reveal">
         <h3>Digital Marketing Intern</h3>
         <p class="meta">The Muddy Marketer · Contract · Birmingham, UK (remote)</p>
         <p class="when">Nov 2023</p>
-        <p class="taught"><b>What it taught me</b>A one-month brief teaches you to find what matters quickly, and to ask instead of assuming.</p>
+        <p class="taught"><b>What it taught me</b>With only a month, I learnt to ask questions early instead of guessing.</p>
       </article>
       <article class="role reveal">
         <h3>Netcom Training</h3>
@@ -401,33 +414,33 @@ footer a{color:var(--gold-soft)}
           <h4>Marketing and Social Media Officer</h4>
           <p class="when">Sep 2022 to Nov 2022</p>
         </div>
-        <p class="taught"><b>What it taught me</b>The system nobody wanted to own turned out to be where the results were. Fixing the process did more than any campaign I ran.</p>
+        <p class="taught"><b>What it taught me</b>Taking on work that others avoided taught me a lot. Improving how the CRM was used helped more than any campaign I ran.</p>
       </article>
 
       <button class="early-toggle" id="earlyBtn" aria-expanded="false" aria-controls="early">Show early career</button>
       <div class="early" id="early" hidden>
         <article class="role small">
           <h3>Mentor</h3><p class="meta">GradRight Inc. · Birmingham, UK</p><p class="when">Sep 2022 to Oct 2022</p>
-          <p class="taught"><b>What it taught me</b>Explaining something to someone else showed me which parts I had only half understood.</p>
+          <p class="taught"><b>What it taught me</b>Explaining things to others showed me where my own understanding still had gaps.</p>
         </article>
         <article class="role small">
           <h3>LinkedIn Volunteer</h3><p class="meta">TUAid · United Kingdom</p><p class="when">Sep 2022 to Oct 2022</p>
-          <p class="taught"><b>What it taught me</b>Volunteering for a charity taught me to respect people's time. Short, clear messages got answers.</p>
+          <p class="taught"><b>What it taught me</b>People were giving their time for free, so I learnt to keep my messages short and clear.</p>
         </article>
         <article class="role small">
           <h3>Course Representative</h3><p class="meta">Coventry University · Coventry, UK</p><p class="when">Oct 2021 to Aug 2022</p>
-          <p class="taught"><b>What it taught me</b>Representing other students meant passing on their concerns accurately, including the ones I would not have raised myself.</p>
+          <p class="taught"><b>What it taught me</b>Speaking for other students taught me to pass on their concerns fairly, even when I saw things differently.</p>
         </article>
         <article class="role small">
           <h3>Digital Content Intern</h3><p class="meta">Kidadl · India (remote)</p><p class="when">Jan 2021 to May 2022</p>
-          <p class="taught"><b>What it taught me</b>Writing for a wide audience on a deadline taught me that the clear version usually beats the clever one.</p>
+          <p class="taught"><b>What it taught me</b>Writing to deadlines taught me that simple and clear usually works best.</p>
         </article>
         <article class="role small">
           <div class="sub-role first"><h4>Digital Marketing Intern</h4><p class="meta">Henry Harvin Education · India</p><p class="when">Nov 2020 to Feb 2021</p></div>
           <div class="sub-role"><h4>Digital Marketing Intern</h4><p class="meta">IIT Bhubaneswar · India</p><p class="when">Dec 2020 to Jan 2021</p></div>
           <div class="sub-role"><h4>Campus Ambassador</h4><p class="meta">Tata Social Enterprise Challenge · Kollam, India</p><p class="when">Nov 2020 to Jan 2021</p></div>
           <div class="sub-role"><h4>Internshala Student Partner</h4><p class="meta">Internshala · India</p><p class="when">Nov 2020 to Jan 2021</p></div>
-          <p class="taught"><b>What it taught me</b>Saying yes to everything early on showed me what I was good at, and what I should hand to someone better.</p>
+          <p class="taught"><b>What it taught me</b>Trying many things early helped me see what I am good at, and where I still have room to grow.</p>
         </article>
       </div>
     </div>
@@ -446,8 +459,9 @@ footer a{color:var(--gold-soft)}
     <div class="reveal">
       <span class="label">Certifications</span>
       <ul>
-        <li><b>CMI Level 7, Strategic Management and Leadership Practice</b><span>Chartered Management Institute</span></li>
-        <li><b>Six Sigma Yellow Belt</b><span>The Council for Six Sigma Certification</span></li>
+        <li class="cert"><a href="certificates/cmi-level-7.webp" target="_blank" rel="noopener"><img src="certificates/cmi-level-7.webp" width="990" height="1400" alt="CMI Level 7, Strategic Management and Leadership Practice certificate" loading="lazy"><span class="cert-txt"><b>CMI Level 7, Strategic Management and Leadership Practice</b><span>Chartered Management Institute · May 2023</span><span class="cert-link">View certificate</span></span></a></li>
+        <li class="cert"><a href="certificates/six-sigma-yellow-belt.webp" target="_blank" rel="noopener"><img src="certificates/six-sigma-yellow-belt.webp" width="1400" height="990" alt="Six Sigma Yellow Belt certificate" loading="lazy"><span class="cert-txt"><b>Six Sigma Yellow Belt</b><span>The Council for Six Sigma Certification · October 2024</span><span class="cert-link">View certificate</span></span></a></li>
+        <li class="cert"><a href="certificates/six-sigma-white-belt.webp" target="_blank" rel="noopener"><img src="certificates/six-sigma-white-belt.webp" width="1400" height="990" alt="Six Sigma White Belt certificate" loading="lazy"><span class="cert-txt"><b>Six Sigma White Belt</b><span>The Council for Six Sigma Certification · May 2024</span><span class="cert-link">View certificate</span></span></a></li>
       </ul>
     </div>
   </div>
